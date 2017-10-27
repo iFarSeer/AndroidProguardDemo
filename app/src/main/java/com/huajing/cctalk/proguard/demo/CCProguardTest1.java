@@ -15,6 +15,7 @@ public class CCProguardTest1 {
     InnerClass innerClass;
 
     public void method1() {
+        outterString = "outterString";
         innerClass = new InnerClass();
         innerClass.innerString = "innerString";
     }

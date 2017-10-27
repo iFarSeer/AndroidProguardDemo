@@ -23,3 +23,25 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#不压缩
+#-dontshrink
+
+#-keep class com.huajing.cctalk.proguard.demo.CCProguardTest1 { *; }
+#-keepnames class com.huajing.cctalk.proguard.demo.CCProguardTest1 { *; }
+
+#-keepclassmembers class com.huajing.cctalk.proguard.demo.CCProguardTest1 { *; }
+#-keepclassmembernames class com.huajing.cctalk.proguard.demo.CCProguardTest1 { *; }
+
+#-keepclasseswithmembers class com.huajing.cctalk.proguard.demo.CCProguardTest1 {
+#    void method1();
+# }
+#
+#-keepclasseswithmembers class com.huajing.cctalk.proguard.demo.CCProguardTest1 {
+#    void method4();
+#}
+#-keepclasseswithmembers class com.huajing.cctalk.proguard.demo.CCProguardTest1 {
+#    *;
+#}
+
+-keepclasseswithmembers class * extends android.app.Fragment

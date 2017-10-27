@@ -14,17 +14,17 @@ android {
 
     // 签名设置
     signingConfigs {
-        release {
-            storeFile file(System.properties['keyStore'])
-            keyAlias System.properties['keyAlias']
-            storePassword System.properties['keyStorePassword']
-            keyPassword System.properties['keyAliasPassword']
+        myConfig {
+            storeFile file("spade.publish")
+            storePassword "spade2013"
+            keyAlias "spade"
+            keyPassword "spade2013"
         }
     }
     buildTypes {
         release {
             // 签名
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.myConfig
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -38,5 +38,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
 }

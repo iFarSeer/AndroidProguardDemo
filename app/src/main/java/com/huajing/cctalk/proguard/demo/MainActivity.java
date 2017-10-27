@@ -13,5 +13,7 @@ public class MainActivity extends AppCompatActivity {
         CCProguardTest1 test1 = new CCProguardTest1();
         test1.method1();
         test1.metthod2("222");
+
+        MainFragment mainFragment = new MainFragment();
     }
 }
